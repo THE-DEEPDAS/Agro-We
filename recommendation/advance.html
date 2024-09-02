@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendation App</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <div id="formContainer">
+        <div class="form-group">
+            <label for="soilType">Soil Type:</label>
+            <select id="soilType">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="sandy">Sandy</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="irrigation">Irrigation (mm):</label>
+            <select id="irrigation">
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cropType">Crop Type:</label>
+            <select id="cropType">
+                <option value="wheat">Wheat</option>
+                <option value="rice">Rice</option>
+                <option value="cotton">Cotton</option>
+                <option value="maize">Maize</option>
+            </select>
+        </div>
+
+        <button onclick="showTechnologies()">Get Recommendation</button>
+
+        <div id="technologyRecommendation"></div>
+    </div>
+    <script src="advance.js"></script>
+    </body>
+    </html>

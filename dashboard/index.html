@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Dashboard -->
+    <div class="dashboard-container">
+        <header>
+            <h1>Agriculture Dashboard</h1>
+        </header>
+        <!-- Form for User Inputs -->
+         <!-- <div class="bg-image-container">
+            <img src="asserts/img1.jpg" alt="bg-img">
+         </div> -->
+        <div class="form-container">
+            <h3>Customize Your Data</h3>
+            <form id="dataForm">
+                <label for="cropSelect">Select Crop:</label>
+                <select id="cropSelect">
+                    <option value="Wheat">Wheat</option>
+                    <option value="Rice">Rice</option>
+                    <option value="Corn">Corn</option>
+                    <option value="Soybean">Soybean</option>
+                    <option value="Barley">Barley</option>
+                    <!-- New Crop Options -->
+                    <option value="Oats">Oats</option>
+                    <option value="Sorghum">Sorghum</option>
+                    <option value="Millet">Millet</option>
+                    <option value="Rye">Rye</option>
+                    <option value="Quinoa">Quinoa</option>
+                    <option value="Buckwheat">Buckwheat</option>
+                </select>
+                
+
+                <label for="timePeriod">Select Time Period:</label>
+                <select id="timePeriod">
+                    <option value="Jan-July">Jun - Oct</option>
+                    <option value="Aug-Dec">Dec - march</option>
+                </select>
+
+                <label for="regionSelect">Select Region:</label>
+                <select id="regionSelect">
+                    <option value="WholeCountry">   India </option>
+                    <option value="North">North</option>
+                    <option value="West">West</option>
+                    <option value="South">South</option>
+                    <option value="East">East</option>
+                    <option value="North-East">North-East</option>
+                    <option value="Central">Central</option>
+                </select>
+
+                <button type="submit">Update Dashboard</button>
+            </form>
+        </div>
+
+        <!-- Charts -->
+        <div class="charts-container">
+            <div class="chart-card"  data-aos="zoom-out-right">
+                <canvas id="cropProductionChart"></canvas>
+            </div>
+            <div class="chart-card" data-aos="zoom-out-left">
+                <canvas id="rainfallChart"></canvas>
+            </div>
+            <div class="chart-card" data-aos="zoom-in-right">
+                <canvas id="soilQualityChart"></canvas>
+            </div>
+            <div class="chart-card" data-aos="zoom-in-left">
+                <canvas id="marketPricesChart"></canvas>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        AOS.init();
+      </script>
+</body>
+</html>

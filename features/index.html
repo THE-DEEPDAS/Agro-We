@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        select, input, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #technologyRecommendation, #weatherInfo {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Form and Graph</h1>
+    <div id="formContainer">
+        <!-- This will be dynamically populated by JavaScript -->
+    </div>
+    <div id="graphContainer" style="display:none;">
+        <canvas id="myChart"></canvas>
+        <div id="diffTable"></div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+     <!-- Weather Prediction Form -->
+     <div class="container">
+        <h1>Weather Prediction</h1>
+        <div class="form-group">
+            <label for="city">Enter City:</label>
+            <input type="text" id="city" placeholder="e.g. London" />
+        </div>
+        <button onclick="getWeather()">Get Weather</button>
+        <div id="weatherInfo"></div>
+    </div>
+    
+    <!-- Technology Recommendation Form -->
+    <div id="formContainer">
+        <div class="form-group">
+            <label for="soilType">Soil Type:</label>
+            <select id="soilType">
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+                <option value="sandy">Sandy</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="irrigation">Irrigation (mm):</label>
+            <select id="irrigation">
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="50">50</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="cropType">Crop Type:</label>
+            <select id="cropType">
+                <option value="wheat">Wheat</option>
+                <option value="rice">Rice</option>
+                <option value="cotton">Cotton</option>
+                <option value="maize">Maize</option>
+            </select>
+        </div>
+
+        <button onclick="showTechnologies()">Get Recommendation</button>
+
+        <div id="technologyRecommendation"></div>
+    </div>
+
+   
+    <script src="script.js"></script>
+    <script src="advance.js"></script>
+    <script src="weather.js"></script>
+</body>
+</html>
