@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 `
                     : ""
                 }
-                <button type="button" onclick="submitForm()">Submit</button>
+                <button type="button" class="submit_" onclick="submitForm()">Submit</button>
             </form>
         `;
 
@@ -205,3 +205,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showForm(); // Show the form when the page loads
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Close the navbar when a link is clicked
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});
+

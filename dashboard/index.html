@@ -5,12 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agriculture Dashboard</title>
     <link rel="stylesheet" href="styles.css">
-    
+    <link rel="stylesheet" href="navbar.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">
+           <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="/dashboard/index.html">Dashboard</a></li>1
+            <li><a href="/harvesting/index.html">Improve Yield</a></li>
+            <li><a href="/recommendation/advance.html">Recommendation</a></li>
+            <li><a href="/weather/weather.html">Weather</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <!-- Dashboard -->
     <div class="dashboard-container">
         <header>
@@ -82,4 +102,19 @@
         AOS.init();
       </script>
 </body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Close the navbar when a link is clicked (improves usability)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+</script>
 </html>

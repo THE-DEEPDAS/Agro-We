@@ -4,6 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-image: url("img2.jpg");
     height: 100vh;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .form-group {
@@ -25,9 +26,10 @@ select, input {
     font-size: 16px;
     background-color: #cce0ff; /* Slightly darker blue */
     color: #333;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
 }
 
-button {
+.submit_ {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
@@ -42,12 +44,12 @@ button {
     transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-button:hover {
+.submit_:hover {
     background-color: #0044cc; /* Darker blue background */
     color: #ffffff; /* White text color */
 }
 
-button::before {
+.submit_::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -61,11 +63,11 @@ button::before {
     z-index: 0;
 }
 
-button:hover::before {
+.submit_:hover::before {
     transform: translate(-50%, -50%) scale(1);
 }
 
-button span {
+.submit_ span {
     position: relative;
     z-index: 1;
 }
@@ -77,4 +79,47 @@ button span {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the table covers the full page and is centered */
+#diffTable {
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 20px auto; /* Center the table horizontally */
+    padding: 20px;
+    border-collapse: collapse;
+}
+
+#diffTable table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+#diffTable th, #diffTable td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#diffTable th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#diffTable tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #diffTable {
+        padding: 10px;
+    }
+
+    #diffTable th, #diffTable td {
+        font-size: 14px;
+        padding: 8px;
+    }
 }
