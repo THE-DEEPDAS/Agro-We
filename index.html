@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
+    <title>Agro We</title>
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="parallax.css">
+    <link rel="stylesheet" href="footer.css">
+    
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">
-           <img src="agrowefinallogo.jpg" alter="logo" height="50px" width="50px" style="border-radius: 9px; ;">
+           <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
         </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="/dashboard/index.html">Dashboard</a></li>
-            <li><a href = "/harvesting/index.html">Nutrients Info</a></li>
-            <li><a href = "/recommendation/advance.html">Recommendation</a></li>
+            <li><a href="/harvesting/index.html">Nutrients Info</a></li>
+            <li><a href="/recommendation/advance.html">Recommendation</a></li>
             <li><a href="/weather/weather.html">Weather</a></li>
             <li><a href="#contact">Contact Us</a></li>
-          </ul>
+        </ul>
     </nav>
+
     <section class="pimg1">
         <div class="ptext">
             <span class="textbg"> 
                 Welcome to AgroWe
             </span>
-
         </div>
     </section>
+    
     <section class=" section section-light">
         <h2>About Us</h2>
         <p>
@@ -44,7 +52,7 @@
     <section class=" section section-light">
         <h2>services</h2>
         <p>
-            your go-to source for real-time, accurate weather forecasts. Whether you're planning your day or preparing for severe weather, our service provides precise updates tailored to your location. With global coverage, instant alerts, and reliable predictions powered by advanced technology, [Your App Name] ensures you're always informed and ready for whatever the weather brings. Stay ahead, stay safe.</p>
+            your go-to source for real-time, accurate weather forecasts. Whether you're planning your day or preparing for severe weather, our service provides precise updates tailored to your location. With global coverage, instant alerts, and reliable predictions powered by advanced technology, Agro We ensures you're always informed and ready for whatever the weather brings. Stay ahead, stay safe.</p>
     </section>
     <section class="pimg3">
         <div class="ptext">
@@ -57,25 +65,38 @@
         <p>
             Welcome to our cutting-edge agriculture technology platform, where we revolutionize farming by providing precise insights into soil quality, nutrient requirements, oxygen levels, and optimal temperature conditions. Our solution empowers farmers to make informed decisions, ensuring healthy crops and sustainable yields tailored to the unique characteristics of their land.</p>
     </section>
-    <section class="pimg4">
-        <div class="ptext">
-            <footer>
-                <div class="footer-container" >
-                  <p>&copy; 2024 YourWebsite. All rights reserved.</p>
-                  <div class="social-icons">
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
+                <p>&copy; 2024 Agro We. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <div class="social-icons">
                     <a href="#"><i class="material-icons">facebook</i></a>
                     <a href="#"><i class="material-icons">twitter</i></a>
                     <a href="#"><i class="material-icons">instagram</i></a>
                     <a href="#"><i class="material-icons">linkedin</i></a>
-                  </div>
                 </div>
-              </footer>
-              
-
+            </div>
         </div>
-    </section>
-    
-
-    
+    </footer>
 </body>
+<script>
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    // Close the navbar when a link is clicked (improves usability)
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+</script>
+
 </html>

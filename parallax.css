@@ -1,29 +1,15 @@
-html , body{
-    height:100%;
-    margin:0;
-    font-size:16px;
-    font-family: 'Lato','sans-serif';
+html, body {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Lato', 'sans-serif';
     font-weight: 400;
     line-height: 1.8em;
-    color:#666;
+    color: #666;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
-.pimg1 {
-    background-image: url("windmill.jpg");
-    min-height: 100%;
-}
-.pimg2 {
-    background-image: url("img2.jpg");
-    min-height: 400px;
-}
-.pimg3{
-    background-image: url("img1.jpg");
-    min-height: 400px;
-}
-.pimg4{
-    background-image: url("thirdimg.jpg");
-    min-height: 400px;
-}
-.pimg1 ,.pimg2,.pimg3,.pimg4 {
+
+.pimg1, .pimg2, .pimg3, .pimg4 {
     position: relative;
     background-position: center;
     background-size: cover;
@@ -31,48 +17,71 @@ html , body{
     background-attachment: fixed;
 }
 
-.ptext{
+.pimg1 {
+    background-image: url("windmill.jpg");
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url("img2.jpg");
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url("img1.jpg");
+    min-height: 400px;
+}
+
+.pimg4 {
+    background-image: url("thirdimg.jpg");
+    min-height: 400px;
+}
+
+.ptext {
     position: absolute;
-    top:50%;
-    width: 100%;text-align: center;
-    color:black;
-    font-size:27px;
+    top: 50%;
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjust position for proper centering */
+    width: 90%; /* Limit width to avoid overflow */
+    text-align: center;
+    color: white;
+    font-size: 27px;
     letter-spacing: 8px;
     text-transform: uppercase;
 }
-.textbg{
+
+.textbg {
     background: #313534;
     color: white;
     padding: 20px;
+    display: inline-block;
+    max-width: 100%; /* Ensure it doesn't exceed screen width */
+    box-sizing: border-box; /* Include padding in the element's width */
 }
-.section{
+
+.section {
     padding: 50px 80px;
     text-align: center;
-
 }
-.section-light{
-    background-color: antiquewhite;
-    color:#666;
 
-}
-.section-light{
+.section-light {
     background-color: #282e34;
-    color:#ddd;
-
+    color: #ddd;
 }
+
 .footer {
     background-color: #000000;
     color: #fff;
     text-align: center;
     padding: 20px 0;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     color: #fff;
     margin: 0 10px;
     text-decoration: none;
-  }
-  
-  .social-icons a:hover {
+}
+
+.social-icons a:hover {
     color: #ddd;
-  }
+}
