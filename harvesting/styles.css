@@ -1,7 +1,9 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url("img2.jpg");
+    height: 100vh;
 }
 
 .form-group {
@@ -14,23 +16,58 @@ label {
     font-weight: bold;
 }
 
-select, input, button {
+select, input {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+    background-color: #cce0ff; /* Slightly darker blue */
+    color: #333;
 }
 
 button {
-    background-color: #4CAF50;
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green background */
     color: white;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #0044cc; /* Darker blue background */
+    color: #ffffff; /* White text color */
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.3); /* Light highlight effect */
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button span {
+    position: relative;
+    z-index: 1;
 }
 
 #technologyRecommendation, #weatherInfo {
@@ -39,5 +76,5 @@ button:hover {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
