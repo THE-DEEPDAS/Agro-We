@@ -1,22 +1,45 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Prediction</title>
+    <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="weather.css">
 </head>
+
 <body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
+        </div>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="https://agrowe.vercel.app/">Home</a></li>
+            <li><a href="https://agrowe.vercel.app#about">About Us</a></li>
+            <li><a href="/dashboard/index.html">Dashboard</a></li>
+            <li><a href="/harvesting/index.html">Improve Yield</a></li>
+            <li><a href="/recommendation/advance.html">Recommendation</a></li>
+            <li><a href="/weather/weather.html">Weather</a></li>
+            <li><a href="https://agrowe.vercel.app#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Main Content Renders Here-->
     <div class="container">
         <h1>Weather Prediction</h1>
         <div class="form-group">
             <label for="city">Enter City:</label>
             <input type="text" id="city" placeholder="e.g. London" />
         </div>
-        <button onclick="getWeather()">Get Weather</button>
+        <button class="Get_Weather" onclick="getWeather()">Get Weather</button>
         <div id="weatherInfo"></div>
     </div>
     <script src="weather.js"></script>
 </body>
+
 </html>

@@ -30,6 +30,7 @@ body::before {
     max-width: 400px;
     z-index: 2;
     position: relative;
+    background-color: rgb(50, 224, 105);
     animation: fadeIn 1s ease-in-out, float 6s ease-in-out infinite;
     transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
@@ -41,6 +42,7 @@ body::before {
 
 .form-group {
     margin-bottom: 20px;
+    /* background-color: rgb(64, 232, 117); */
     animation: slideInUp 0.5s ease-out;
 }
 
@@ -68,7 +70,7 @@ select:focus {
 }
 
 /* From Uiverse.io by mrhyddenn */ 
-button {
+.special_button {
     background: #fff;
     border: none;
     padding: 10px 20px;
@@ -87,7 +89,7 @@ button {
     transform: skew(21deg);
   }
   
-  button::before {
+  .special_button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -101,12 +103,12 @@ button {
     border-radius: 10px;
   }
   
-  button:hover {
+  .special_button:hover {
     color: #fff;
     border-radius: 10px;
   }
   
-  button:hover::before {
+  .special_button:hover::before {
     left: 0;
     right: 0;
     opacity: 1;
@@ -148,3 +150,9 @@ button {
         transform: translateY(-10px);
     }
 }
+/* 
+@media (max-width:400px){
+    #formContainer {
+        padding-top: 250px;
+    }
+} */

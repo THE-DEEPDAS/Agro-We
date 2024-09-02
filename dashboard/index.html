@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,11 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
     <nav class="navbar">
         <div class="logo">
-           <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
+            <img src="agrowefinallogo.jpg" alt="logo" height="50px" width="50px" style="border-radius: 9px;">
         </div>
         <button class="hamburger" aria-label="Toggle navigation">
             <span class="bar"></span>
@@ -21,13 +23,13 @@
             <span class="bar"></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="/dashboard/index.html">Dashboard</a></li>1
+            <li><a href="https://agrowe.vercel.app/">Home</a></li>
+            <li><a href="https://agrowe.vercel.app#about">About Us</a></li>
+            <li><a href="/dashboard/index.html">Dashboard</a></li>
             <li><a href="/harvesting/index.html">Improve Yield</a></li>
             <li><a href="/recommendation/advance.html">Recommendation</a></li>
             <li><a href="/weather/weather.html">Weather</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="https://agrowe.vercel.app#contact">Contact Us</a></li>
         </ul>
     </nav>
 
@@ -37,7 +39,7 @@
             <h1>Agriculture Dashboard</h1>
         </header>
         <!-- Form for User Inputs -->
-         <!-- <div class="bg-image-container">
+        <!-- <div class="bg-image-container">
             <img src="asserts/img1.jpg" alt="bg-img">
          </div> -->
         <div class="form-container">
@@ -58,7 +60,7 @@
                     <option value="Quinoa">Quinoa</option>
                     <option value="Buckwheat">Buckwheat</option>
                 </select>
-                
+
 
                 <label for="timePeriod">Select Time Period:</label>
                 <select id="timePeriod">
@@ -68,7 +70,7 @@
 
                 <label for="regionSelect">Select Region:</label>
                 <select id="regionSelect">
-                    <option value="WholeCountry">   India </option>
+                    <option value="WholeCountry"> India </option>
                     <option value="North">North</option>
                     <option value="West">West</option>
                     <option value="South">South</option>
@@ -83,7 +85,7 @@
 
         <!-- Charts -->
         <div class="charts-container">
-            <div class="chart-card"  data-aos="zoom-out-right">
+            <div class="chart-card" data-aos="zoom-out-right">
                 <canvas id="cropProductionChart"></canvas>
             </div>
             <div class="chart-card" data-aos="zoom-out-left">
@@ -95,12 +97,12 @@
             <div class="chart-card" data-aos="zoom-in-left">
                 <canvas id="marketPricesChart"></canvas>
             </div>
-    </div>
+        </div>
 
-    <script src="script.js"></script>
-    <script>
-        AOS.init();
-      </script>
+        <script src="script.js"></script>
+        <script>
+            AOS.init();
+        </script>
 </body>
 <script>
     const hamburger = document.querySelector(".hamburger");
@@ -117,4 +119,5 @@
         });
     });
 </script>
+
 </html>

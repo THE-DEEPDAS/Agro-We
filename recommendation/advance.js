@@ -112,3 +112,17 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('technologyRecommendation').textContent = technologyRecommendation;
     };
 });
+
+const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".nav-links");
+
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+
+// Close the navbar when a link is clicked
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+    });
+});

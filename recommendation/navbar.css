@@ -1,13 +1,13 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .navbar {
+    position: fixed; /* Fix the navbar at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar is on top of other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(95, 101, 97);
+    background-color: rgb(64, 232, 117);
     padding: 10px 20px;
 }
 
@@ -35,7 +35,7 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: rgb(95, 101, 97);
+    background-color: rgb(64, 232, 117);
     border-radius: 4px;
 }
 
@@ -60,7 +60,12 @@ body {
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: rgb(95, 101, 97);
+        background-color: rgb(64, 232, 117);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        right: 0;
+        z-index: 999; /* Ensure the menu is on top */
     }
 
     .nav-links.active {
@@ -80,11 +85,11 @@ body {
         text-align: center;
         width: 100%;
         padding: 15px 0;
-        border-bottom: 1px solid rgb(95, 101, 97);
+        border-bottom: 1px solid rgb(64, 232, 117);
     }
 
     .nav-links a:hover {
-        background-color: rgb(95, 101, 97);
+        background-color: rgb(64, 232, 117);
         border-radius: 0;
     }
 }

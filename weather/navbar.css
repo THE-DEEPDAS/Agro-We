@@ -1,9 +1,9 @@
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
 .navbar {
+    position: fixed; /* Fix the navbar at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the navbar is on top of other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ body {
 .hamburger .bar {
     height: 3px;
     width: 25px;
-    background-color: white;
+    background-color: rgb(95, 101, 97);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -61,6 +61,11 @@ body {
         width: 100%;
         text-align: center;
         background-color: rgb(95, 101, 97);
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        right: 0;
+        z-index: 999; /* Ensure the menu is on top */
     }
 
     .nav-links.active {
